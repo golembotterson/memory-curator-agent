@@ -10,7 +10,7 @@ use anyhow::Result;
 #[command(about = "Memory Curator Agent - curate daily logs into MEMORY.md", long_about = None)]
 struct Args {
     /// Path to memory directory
-    #[arg(short, long, default_value = "/home/jascha/.openclaw/workspace/memory")]
+    #[arg(short, long, default_value = "~/.openclaw/workspace/memory")]
     memory_dir: PathBuf,
 
     /// Number of days to review
@@ -18,7 +18,7 @@ struct Args {
     days: usize,
 
     /// Path to MEMORY.md file
-    #[arg(short, long, default_value = "/home/jascha/.openclaw/workspace/MEMORY.md")]
+    #[arg(short, long, default_value = "~/.openclaw/workspace/MEMORY.md")]
     memory_file: PathBuf,
 
     /// Output report path

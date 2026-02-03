@@ -5,13 +5,13 @@
 agent "memory-curator" {
   version = "0.1.0"
   description = "Curate daily memory logs into MEMORY.md, identify signal, prune stale entries"
-  author = "Golum <golum@openclaw.local>"
+  author = "Golum <golembotterson@gmail.com>"
   
   // Input schema
   input {
-    memory_dir: string = "/home/jascha/.openclaw/workspace/memory"
+    memory_dir: string = "~/.openclaw/workspace/memory"
     days_to_review: int = 2
-    memory_file: string = "/home/jascha/.openclaw/workspace/MEMORY.md"
+    memory_file: string = "~/.openclaw/workspace/MEMORY.md"
     max_daily_entries: int = 5
     min_signal_confidence: float = 0.7
     prune_threshold_days: int = 90
@@ -30,10 +30,10 @@ agent "memory-curator" {
   permissions {
     files {
       read = [
-        "/home/jascha/.openclaw/workspace/memory/*.md"
+        "~/.openclaw/workspace/memory/*.md"
       ]
       write = [
-        "/home/jascha/.openclaw/workspace/MEMORY.md",
+        "~/.openclaw/workspace/MEMORY.md",
         "/tmp/curator-*.json"
       ]
     }

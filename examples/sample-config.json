@@ -1,7 +1,7 @@
 {
-  "memory_dir": "/home/jascha/.openclaw/workspace/memory",
+  "memory_dir": "~/.openclaw/workspace/memory",
   "days_to_review": 2,
-  "memory_file": "/home/jascha/.openclaw/workspace/MEMORY.md",
+  "memory_file": "~/.openclaw/workspace/MEMORY.md",
   "max_daily_entries": 5,
   "min_signal_confidence": 0.7,
   "prune_threshold_days": 90

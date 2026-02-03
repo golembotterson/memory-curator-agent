@@ -17,9 +17,9 @@ pub struct CuratorConfig {
 impl Default for CuratorConfig {
     fn default() -> Self {
         Self {
-            memory_dir: PathBuf::from("/home/jascha/.openclaw/workspace/memory"),
+            memory_dir: PathBuf::from("~/.openclaw/workspace/memory"),
             days_to_review: 2,
-            memory_file: PathBuf::from("/home/jascha/.openclaw/workspace/MEMORY.md"),
+            memory_file: PathBuf::from("~/.openclaw/workspace/MEMORY.md"),
             max_daily_entries: 5,
             min_signal_confidence: 0.7,
             prune_threshold_days: 90,

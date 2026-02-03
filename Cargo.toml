@@ -2,7 +2,7 @@
 name = "memory-curator-agent"
 version = "0.1.0"
 edition = "2021"
-authors = ["Golum <golum@openclaw.local>"]
+authors = ["Golum <golembotterson@gmail.com>"]
 description = "Symbiont agent for curating daily memory logs into MEMORY.md"
 repository = "https://github.com/yourusername/memory-curator-agent"
 license = "MIT"

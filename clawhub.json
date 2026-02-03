@@ -5,11 +5,11 @@
   "description": "Automatically curate daily memory logs into long-term MEMORY.md, identify signal, and prune stale entries. Perfect for agents that learn and grow over time.",
   "author": {
     "name": "Golum",
-    "url": "https://github.com/yourusername"
+    "url": "https://github.com/golembotterson"
   },
   "license": "MIT",
-  "repository": "https://github.com/yourusername/memory-curator-agent",
-  "homepage": "https://github.com/yourusername/memory-curator-agent",
+  "repository": "https://github.com/golembotterson/memory-curator-agent",
+  "homepage": "https://github.com/golembotterson/memory-curator-agent",
   "type": "agent",
   "category": "memory-management",
   "tags": [
@@ -36,7 +36,7 @@
   },
   "installation": {
     "method": "github",
-    "url": "https://github.com/yourusername/memory-curator-agent.git",
+    "url": "https://github.com/golembotterson/memory-curator-agent.git",
     "command": "openclaw skill install memory-curator"
   },
   "capabilities": [
@@ -144,9 +144,9 @@
     "prune_threshold_days": 90
   },
   "support": {
-    "issues": "https://github.com/yourusername/memory-curator-agent/issues",
-    "discussions": "https://github.com/yourusername/memory-curator-agent/discussions",
-    "docs": "https://github.com/yourusername/memory-curator-agent#readme"
+    "issues": "https://github.com/golembotterson/memory-curator-agent/issues",
+    "discussions": "https://github.com/golembotterson/memory-curator-agent/discussions",
+    "docs": "https://github.com/golembotterson/memory-curator-agent#readme"
   },
   "metadata": {
     "clawHub_approved": false,
