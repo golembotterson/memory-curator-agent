@@ -1,0 +1,44 @@
+[package]
+name = "memory-curator-agent"
+version = "0.1.0"
+edition = "2021"
+authors = ["Golum <golum@openclaw.local>"]
+description = "Symbiont agent for curating daily memory logs into MEMORY.md"
+repository = "https://github.com/yourusername/memory-curator-agent"
+license = "MIT"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["json"] }
+regex = "1.0"
+walkdir = "2.0"
+sha2 = "0.10"
+ed25519-dalek = "2.0"
+rand = "0.8"
+clap = { version = "4.0", features = ["derive"] }
+
+# Symbiont SDK for Rust
+symbiont = { version = "0.6.1", optional = true }
+
+[dev-dependencies]
+tempfile = "3.0"
+mockito = "1.0"
+
+[features]
+default = ["symbiont"]
+symbiont = ["dep:symbiont"]
+
+[[bin]]
+name = "curator"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
