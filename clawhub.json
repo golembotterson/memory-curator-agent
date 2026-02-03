@@ -1,0 +1,158 @@
+{
+  "id": "memory-curator",
+  "name": "Memory Curator Agent",
+  "version": "0.1.0",
+  "description": "Automatically curate daily memory logs into long-term MEMORY.md, identify signal, and prune stale entries. Perfect for agents that learn and grow over time.",
+  "author": {
+    "name": "Golum",
+    "url": "https://github.com/yourusername"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/yourusername/memory-curator-agent",
+  "homepage": "https://github.com/yourusername/memory-curator-agent",
+  "type": "agent",
+  "category": "memory-management",
+  "tags": [
+    "memory",
+    "curation",
+    "automation",
+    "symbiont",
+    "openclaw",
+    "scheduling",
+    "audit"
+  ],
+  "keywords": [
+    "memory management",
+    "long-term learning",
+    "signal detection",
+    "daily logs",
+    "automation",
+    "cron jobs"
+  ],
+  "requirements": {
+    "openclaw": ">=1.0.0",
+    "symbiont": ">=0.6.1",
+    "rust": ">=1.70.0"
+  },
+  "installation": {
+    "method": "github",
+    "url": "https://github.com/yourusername/memory-curator-agent.git",
+    "command": "openclaw skill install memory-curator"
+  },
+  "capabilities": [
+    "scan-daily-logs",
+    "detect-signal",
+    "update-memory-file",
+    "prune-stale-entries",
+    "generate-audit-reports",
+    "scheduled-execution"
+  ],
+  "configuration": {
+    "memory_dir": {
+      "type": "string",
+      "default": "~/.openclaw/workspace/memory",
+      "description": "Path to daily log directory"
+    },
+    "days_to_review": {
+      "type": "integer",
+      "default": 2,
+      "description": "Number of days to scan back"
+    },
+    "memory_file": {
+      "type": "string",
+      "default": "~/.openclaw/workspace/MEMORY.md",
+      "description": "Path to long-term memory file"
+    },
+    "max_daily_entries": {
+      "type": "integer",
+      "default": 5,
+      "description": "Maximum entries to promote per run"
+    },
+    "min_signal_confidence": {
+      "type": "number",
+      "default": 0.7,
+      "description": "Confidence threshold for signal detection (0.0-1.0)"
+    },
+    "prune_threshold_days": {
+      "type": "integer",
+      "default": 90,
+      "description": "Delete entries older than N days"
+    }
+  },
+  "usage": {
+    "cli": "curator --memory-dir /path/to/memory --days 2 --output-report report.json",
+    "cron": {
+      "schedule": "0 3 * * 2,5",
+      "timezone": "America/Los_Angeles",
+      "message": "Review last 2 days of memory logs and update MEMORY.md"
+    },
+    "symbiont": "symbi run agent.dsl --config config.json"
+  },
+  "features": [
+    "Automated daily log scanning",
+    "Pattern-based signal detection",
+    "Confidence scoring",
+    "Safe MEMORY.md updates with rollback",
+    "Stale entry pruning",
+    "JSON audit reports",
+    "Sandboxed execution (Symbiont Tier1)",
+    "Zero external dependencies"
+  ],
+  "security": {
+    "sandbox": "symbiont-tier1",
+    "audit": "enabled",
+    "encryption": "ed25519",
+    "network": "none",
+    "secrets": "none"
+  },
+  "permissions": {
+    "read": [
+      "~/.openclaw/workspace/memory/*.md"
+    ],
+    "write": [
+      "~/.openclaw/workspace/MEMORY.md",
+      "/tmp/curator-*.json"
+    ],
+    "execute": "local-only"
+  },
+  "changelog": {
+    "0.1.0": {
+      "date": "2026-02-03",
+      "changes": [
+        "Initial release",
+        "Core scan, curate, merge, prune workflow",
+        "Symbiont DSL agent definition",
+        "Rust implementation with full test suite",
+        "CLI tool with configurable options",
+        "JSON audit reports"
+      ]
+    }
+  },
+  "roadmap": [
+    "v0.2: Multi-file and multi-user support",
+    "v0.3: LLM-based signal detection",
+    "v0.4: Channel integration (Slack, Discord)",
+    "v0.5: Semantic clustering and cross-linking",
+    "v1.0: Stable API, Symbiont v1.0 support"
+  ],
+  "example_config": {
+    "memory_dir": "/home/jascha/.openclaw/workspace/memory",
+    "days_to_review": 2,
+    "memory_file": "/home/jascha/.openclaw/workspace/MEMORY.md",
+    "max_daily_entries": 5,
+    "min_signal_confidence": 0.7,
+    "prune_threshold_days": 90
+  },
+  "support": {
+    "issues": "https://github.com/yourusername/memory-curator-agent/issues",
+    "discussions": "https://github.com/yourusername/memory-curator-agent/discussions",
+    "docs": "https://github.com/yourusername/memory-curator-agent#readme"
+  },
+  "metadata": {
+    "clawHub_approved": false,
+    "clawHub_featured": false,
+    "downloads": 0,
+    "rating": 0,
+    "maintainer_verified": false
+  }
+}
