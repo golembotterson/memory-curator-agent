@@ -174,7 +174,7 @@ fn extract_headlines(content: &str) -> Vec<String> {
 }
 
 fn score_signal(text: &str) -> f32 {
-    let mut score = 0.5;
+    let mut score: f32 = 0.5;
 
     // Boost for keywords
     let keywords = vec!["decision", "learned", "important", "critical", "completed", "project"];
