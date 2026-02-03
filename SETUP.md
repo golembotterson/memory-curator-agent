@@ -108,7 +108,7 @@ cargo build --release
 
 With Symbiont features:
 ```bash
-cargo build --release --features symbiont
+cargo build --release --features symbi
 ```
 
 ### Testing

@@ -48,6 +48,8 @@ cargo run -- \
 
 ### Run via Symbiont
 
+First install symbi: `cargo install symbi`
+
 ```bash
 symbi run agent.dsl --config config.json
 ```
